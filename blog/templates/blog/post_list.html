@@ -1,35 +1,29 @@
 <html>
     <head>
-        <title>Yash Jani's blog</title>
-
-	<body>
-	<center>
-	<u>
-<h1><font size="6" color="white" face="Lucida Handwriting">Yash Jani</font></h1>
-<h2><font size="5" color="white" face="Lucida Handwriting">A student</font></h2>
-<h3><font size="5" color="white" face="Lucida Handwriting">Studying in 9th Grade</font></h3>
-
-	</u>
-	</center>
-
-<p><font size="5" color="white" face="Lucida Handwriting">First Blog:</font></p>
-<p><font size="5" color="white" face="Lucida Handwriting">Second Blog:</font></p>
-<p><font size="5" color="white" face="Lucida Handwriting">Third Blog:</font></p>
-<p><font size="5" color="white" face="Lucida Handwriting">Fourth Blog:</font></p>
-
-
-
-	</body>
-
-
-	<style>
-		body {
-		background-color: #494241;
-
-}
-
-	</style>
+        <title>Yash Jani's Blog</title>
     </head>
-   
-    
+    <body>
+        <div>
+            <h1><a href="/">Yash Jani's Blog</a></h1>
+        </div>
+
+{% for post in posts %}
+
+        <div>
+
+<p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+
+            
+        </div>
+{% endfor %}
+
+
+        <div>
+            
+        </div>
+
+
+    </body>
 </html>
